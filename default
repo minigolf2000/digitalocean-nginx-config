@@ -41,6 +41,20 @@ server {
 }
 
 server {
+    server_name www.gfychess.com;
+    root /var/www/gfychess.com;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
+
+server {
+    server_name  gfychess.com;
+    return       301 $scheme://www.gfychess.com$request_uri;
+}
+
+server {
     server_name www.virtuososheetmusic.com;
     root /var/www/virtuososheetmusic.com;
 

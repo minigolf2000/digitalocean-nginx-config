@@ -1,7 +1,4 @@
-```
-sudo certbot --nginx -d golfsinteppadon.com -d www.golfsinteppadon.com
-sudo certbot --nginx -d madcastles.com -d www.madcastles.com
-sudo certbot --nginx -d virtuososheetmusic.com -d www.virtuososheetmusic.com
+Steps for adding new website
 
-sudo certbot --nginx -d figmagolf.com -d www.figmagolf.com
-```
+1. Create new block in `default`. Copy block into /etc/nginx/sites-available
+2. Create new line in `certs.md`. Run that line on the server. Select [2] for redirect
