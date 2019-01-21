@@ -44,6 +44,10 @@ server {
     server_name www.gfychess.com;
     root /var/www/gfychess.com;
 
+    gzip on;
+    gzip_types text/plain application/octet-stream;
+    gzip_min_length 1000;
+
     location / {
         try_files $uri $uri/ =404;
     }
